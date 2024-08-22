@@ -1,14 +1,15 @@
 package samples.jwtauthserver.springsecurity.infrastructure.security
 
 import org.slf4j.LoggerFactory
+import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.stereotype.Service
 import samples.jwtauthserver.springsecurity.core.extensions.logInfo
 import samples.jwtauthserver.springsecurity.core.extensions.logWarn
+import samples.jwtauthserver.springsecurity.core.models.User
 import samples.jwtauthserver.springsecurity.core.repositories.UserFilterProperties
 import samples.jwtauthserver.springsecurity.core.repositories.UserRepository
-import samples.jwtauthserver.springsecurity.infrastructure.dtos.SpringUserDetails
 
 @Service
 class SpringUserDetailsService(private val userRepository: UserRepository) : UserDetailsService {
@@ -33,4 +34,10 @@ class SpringUserDetailsService(private val userRepository: UserRepository) : Use
     companion object {
         val logger = LoggerFactory.getLogger(SpringUserDetailsService::class.java)
     }
+}
+
+class SpringUserDetails(val user: User) : UserDetails {
+    override fun getUsername() = user.username
+    override fun getPassword() = user.password
+    override fun getAuthorities(): Collection<GrantedAuthority> = listOf(GrantedAuthority({ "ROLE_ADMIN" }))
 }
