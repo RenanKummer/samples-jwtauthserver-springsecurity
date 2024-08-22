@@ -18,8 +18,7 @@ class SpringSecurityConfigs {
     fun filterChain(httpSecurity: HttpSecurity): SecurityFilterChain {
         httpSecurity
             .httpBasic({ config -> config.authenticationEntryPoint(HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)) })
-            .csrf { it -> it.disable() }
-//            .csrf { config -> config.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()) }
+            .csrf { config -> config.disable() }
             .authorizeHttpRequests { config -> config
                 .requestMatchers("/actuator/health").permitAll()
                 .anyRequest().authenticated()
