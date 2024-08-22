@@ -1,4 +1,4 @@
-package samples.jwtauthserver.springsecurity.settings.serialization
+package samples.jwtauthserver.springsecurity.infrastructure.serialization
 
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.databind.DeserializationFeature

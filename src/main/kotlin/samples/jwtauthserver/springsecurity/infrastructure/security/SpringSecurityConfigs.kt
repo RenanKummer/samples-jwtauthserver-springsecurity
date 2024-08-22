@@ -1,4 +1,4 @@
-package samples.jwtauthserver.springsecurity.settings.security
+package samples.jwtauthserver.springsecurity.infrastructure.security
 
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean

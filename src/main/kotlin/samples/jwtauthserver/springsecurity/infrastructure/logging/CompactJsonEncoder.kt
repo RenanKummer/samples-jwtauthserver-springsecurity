@@ -1,4 +1,4 @@
-package samples.jwtauthserver.springsecurity.settings.logging
+package samples.jwtauthserver.springsecurity.infrastructure.logging
 
 import ch.qos.logback.classic.Level
 import ch.qos.logback.classic.encoder.JsonEncoder
@@ -8,7 +8,7 @@ import ch.qos.logback.classic.spi.ThrowableProxy
 import com.fasterxml.jackson.core.JsonGenerator
 import org.slf4j.event.KeyValuePair
 import samples.jwtauthserver.springsecurity.core.models.LoggableException
-import samples.jwtauthserver.springsecurity.settings.serialization.JsonSerializer
+import samples.jwtauthserver.springsecurity.infrastructure.serialization.JsonSerializer
 import java.io.ByteArrayOutputStream
 import java.text.SimpleDateFormat
 

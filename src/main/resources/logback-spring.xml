@@ -1,6 +1,6 @@
 <configuration>
     <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder class="samples.jwtauthserver.springsecurity.settings.logging.CompactJsonEncoder">
+        <encoder class="samples.jwtauthserver.springsecurity.infrastructure.logging.CompactJsonEncoder">
         </encoder>
     </appender>
 
