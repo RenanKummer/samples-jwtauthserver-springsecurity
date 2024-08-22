@@ -1,0 +1,10 @@
+<configuration>
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="samples.jwtauthserver.springsecurity.settings.logging.CompactJsonEncoder">
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="consoleAppender"/>
+    </root>
+</configuration>

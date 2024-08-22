@@ -1,0 +1,10 @@
+[versions]
+kotlin = "2.0.10"
+exposed = "0.53.0"
+
+[libraries]
+exposed-spring-boot-starter = { module = "org.jetbrains.exposed:exposed-spring-boot-starter", version.ref = "exposed" }
+exposed-java-time = { module = "org.jetbrains.exposed:exposed-java-time", version.ref = "exposed" }
+
+[bundles]
+exposed = ["exposed-spring-boot-starter", "exposed-java-time"]

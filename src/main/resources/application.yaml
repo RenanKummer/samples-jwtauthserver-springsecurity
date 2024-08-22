@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: samples-springsecurity-jwtauthserver
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/jwtauthserver
+    username: user
+    password: password
+  main:
+    banner-mode: off
+
+logging:
+  level:
+    Exposed: DEBUG
+
+security:
+  password-expiration-days: 180
+  bcrypt-strength: -1
