@@ -8,5 +8,5 @@ fun main() {
     secureRandom.nextBytes(keyBytes)
 
     val secretKey = keyBytes.joinToString("") { String.format("%02x", it) }
-    println(secretKey)
+    println("Your secret is $secretKey")
 }
