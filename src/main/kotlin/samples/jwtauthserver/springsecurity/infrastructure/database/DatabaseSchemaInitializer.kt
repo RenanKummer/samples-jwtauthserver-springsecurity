@@ -3,7 +3,6 @@ package samples.jwtauthserver.springsecurity.infrastructure.database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.slf4j.LoggerFactory
 import org.springframework.context.ApplicationListener
-import org.springframework.context.annotation.Profile
 import org.springframework.context.event.ContextRefreshedEvent
 import org.springframework.stereotype.Component
 import org.springframework.transaction.annotation.Transactional
@@ -13,7 +12,6 @@ import samples.jwtauthserver.springsecurity.infrastructure.database.entities.Use
 
 @Component
 @Transactional
-@Profile("local")
 class DatabaseSchemaInitializer(
     private val userRepository: UserRepository
 ) : ApplicationListener<ContextRefreshedEvent> {
