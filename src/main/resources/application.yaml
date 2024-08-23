@@ -16,3 +16,6 @@ logging:
 security:
   password-expiration-days: 180
   bcrypt-strength: -1
+  jwt:
+    secret-key: 6d05b71dde3978428a49f1a90814f3f523a3ed6bf5001726fe2c60ba35b73cdaa2e45961bbe3e1962e558aeef016ec9601d3e28bf2b95e3b2c1e8fa53ea6ef83
+    expiration-time: 3600000
