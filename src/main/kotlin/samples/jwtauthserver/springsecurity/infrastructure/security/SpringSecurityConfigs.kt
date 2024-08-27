@@ -48,7 +48,7 @@ class SpringSecurityConfigs {
     fun corsConfigurationSource(): CorsConfigurationSource {
         val configuration = CorsConfiguration()
 
-        configuration.allowedOrigins = listOf("http://localhost:3000")
+        configuration.allowedOrigins = listOf("http://localhost:3000", "http://127.0.0.1:3000")
         configuration.allowedMethods = listOf("*")
         configuration.allowedHeaders = listOf("*")
 
