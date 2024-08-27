@@ -21,9 +21,11 @@ class SpringSecurityConfigs {
     @Bean
     fun securityFilterChain(
         httpSecurity: HttpSecurity,
-        jwtAuthenticationFilter: JwtAuthenticationFilter
+        jwtAuthenticationFilter: JwtAuthenticationFilter,
+        corsConfigurationSource: CorsConfigurationSource
     ): SecurityFilterChain {
         httpSecurity
+            .cors { it.configurationSource(corsConfigurationSource) }
             .csrf { it.disable() }
             .authorizeHttpRequests { authorizations -> authorizations
                 .requestMatchers("/actuator/health").permitAll()
