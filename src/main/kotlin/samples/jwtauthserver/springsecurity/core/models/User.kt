@@ -3,10 +3,10 @@ package samples.jwtauthserver.springsecurity.core.models
 import java.time.LocalDate
 import java.time.OffsetDateTime
 
-open class User(
+data class User(
     val id: ULong? = null,
-    open val username: String,
-    open val password: String,
+    val username: String,
+    val password: String,
     val passwordHashAlgorithm: String? = null,
     val passwordExpirationDate: LocalDate? = null,
     val email: String,
